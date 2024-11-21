@@ -25,8 +25,11 @@ def mxn_to_euro(price_kg_mxn, eur_rate):
 
 
 # User inputs
-price = st.number_input("Enter price in MXN:", min_value=0)
-weight = st.number_input("Enter weight in grams:", min_value=1)
+with col1:
+    price = st.number_input("Enter price in MXN:", min_value=0)
+
+with col2:
+    weight = st.number_input("Enter weight in grams:", min_value=1)
 
 # Fetch exchange rate
 if 'eur_rate' not in st.session_state:  # Cache the exchange rate to avoid repeated API calls
