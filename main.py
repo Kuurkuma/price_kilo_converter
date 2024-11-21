@@ -1,11 +1,13 @@
 import streamlit as st
 import requests
 
-st.title("Price per Kg calculator")
-st.write("Buy smarter by knowing the price per kilo")
+# 
+print("~~*-*-~~")
+st.title("Price Converter")
+st.write("Convert weight & currencies")
 
-price = st.number_input("Enter the price of the product (in MXN)")
-weight = st.number_input("Enter the weight of the product")
+price = st.number_input(min_value=0, label="Enter price in MXN")
+weight = st.number_input(min_value=0, label="Indicate weight in grams")
 
 # create a converter function to price per kilo
 def converter_kg(price,weight):
